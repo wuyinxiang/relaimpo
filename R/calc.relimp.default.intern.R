@@ -399,10 +399,10 @@ function (object, x = NULL, ..., type = "lmg", diff = FALSE, rank = TRUE, rela =
 
     # check covariance matrix properties
     hilf <- eigen(covg, only.values = T)$values
-    if (is.complex(hilf) || min(hilf) <= 0)
-        stop(paste("covg must be", "\n", 
-          "a positive definite covariance matrix", "\n",
-          "or a data matrix / data frame with linearly independent columns."))
+    #if (is.complex(hilf) || min(hilf) <= 0)
+    #    stop(paste("covg must be", "\n", 
+    #      "a positive definite covariance matrix", "\n",
+    #      "or a data matrix / data frame with linearly independent columns."))
 
     # no of regressors
     p <- ncol(covg) - 1
